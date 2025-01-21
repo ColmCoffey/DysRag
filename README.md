@@ -4,8 +4,9 @@
 This project implements a RAG (Retrieval Augmented Generation) system that processes medical literature about Cervical Dystonia, a neurological movement disorder characterized by painful, involuntary neck muscle contractions and abnormal head positioning. Deployed as a serverless application on AWS, it provides accurate, citation-backed responses through a cost-effective architecture (approximately $0.002 per query). The system serves as a specialized knowledge base for healthcare providers and researchers, enabling efficient access to evidence-based information about symptoms, treatments, and research developments.
 
 ## Architecture
+![DepRag_architecture](https://github.com/user-attachments/assets/97d1c12f-a503-4513-8df8-9cd20788df69)
 
-The system provides a robust and scalable solution for deploying a medical knowledge base with modern RAG capabilities, specifically focused on Cervical Dystonia information retrieval and analysis. Its serverless architecture ensures cost-effective scaling while maintaining reliable performance for medical information queries.
+The system provides a cost effective and scalable solution for deploying a medical knowledge base with modern RAG capabilities, specifically focused on Cervical Dystonia information retrieval and analysis. Its serverless architecture ensures cost-effective scaling while maintaining reliable performance for medical information queries.
 
 ### 1. Data Processing Layer
 * **STORAGE**: ChromaDB as vector database
