@@ -56,9 +56,14 @@ export class RagCdkInfraStack extends cdk.Stack {
     });
 
     // Public URL for the API function.
-    const functionUrl = apiFunction.addFunctionUrl({
-      authType: FunctionUrlAuthType.NONE,
-    });
+    	const functionUrl = apiFunction.addFunctionUrl({
+  		authType: FunctionUrlAuthType.NONE,
+  	cors: {
+    	allowedOrigins: ['http://localhost:5173', 'https://colmcoffey.click'],
+    	allowedMethods: [cdk.aws_lambda.HttpMethod.GET, cdk.aws_lambda.HttpMethod.POST],
+    	allowedHeaders: ['Content-Type'],
+  	}
+		});
 
     // Grant permissions for all resources to work together.
     ragQueryTable.grantReadWriteData(workerFunction);
